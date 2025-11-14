@@ -236,8 +236,14 @@ def progressive_recall_benchmark(
     print(f"{'-'*55}")
 
     for value in param_values:
-        # Set parameter
-        setattr(index, param_name, value)
+        # Set parameter (handle nested attributes for HNSW)
+        if hasattr(index, param_name):
+            setattr(index, param_name, value)
+        elif hasattr(index, 'hnsw') and hasattr(index.hnsw, param_name):
+            # For HNSW indexes, efSearch is on index.hnsw
+            setattr(index.hnsw, param_name, value)
+        else:
+            raise AttributeError(f"Parameter '{param_name}' not found on index or index.hnsw")
 
         # Benchmark
         bench_results = benchmark_index(index, queries, k, ground_truth)
