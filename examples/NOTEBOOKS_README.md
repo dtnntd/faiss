@@ -81,6 +81,60 @@ Bộ notebooks này cung cấp các ví dụ trực quan và tương tác để 
 
 ---
 
+### 4. `04_hnsw_visualization.ipynb`
+**Mức độ**: Advanced
+**Thời gian**: ~20 phút
+
+**Nội dung**:
+- HNSW (Hierarchical Navigable Small World) graph structure
+- Visualization của hierarchical layers
+- Trade-off giữa M, efConstruction, efSearch
+- So sánh HNSW vs IVF
+- Performance tuning guide
+
+**Bạn sẽ học được**:
+- Cách HNSW graph hoạt động
+- Layer hierarchy và search process
+- Parameter tuning cho optimal performance
+- Khi nào nên dùng HNSW
+- Memory vs accuracy trade-offs
+
+**Visualizations**:
+- HNSW layer distribution
+- Hierarchical structure pyramid
+- efSearch vs recall/speed trade-offs
+- M parameter comparison
+- HNSW vs IVF performance
+
+---
+
+### 5. `06_real_world_visualization.ipynb`
+**Mức độ**: Production-Ready
+**Thời gian**: ~25 phút
+
+**Nội dung**:
+- Product recommendation system (E-commerce)
+- User-based recommendations
+- Batch processing và optimization
+- Production performance analysis
+- Best practices và deployment patterns
+
+**Bạn sẽ học được**:
+- Build production-ready recommendation system
+- Handle real-world data patterns
+- Performance optimization techniques
+- Monitoring và reliability patterns
+- Scaling strategies
+
+**Visualizations**:
+- Product embeddings space
+- Recommendation visualization
+- User profile analysis
+- Production performance metrics
+- Latency và throughput charts
+
+---
+
 ## 🚀 Cách sử dụng
 
 ### Yêu cầu
@@ -107,9 +161,17 @@ Sau đó mở từng notebook trong thư mục `examples/`.
 
 ### Thứ tự học tập đề xuất
 
-1. **Beginner**: Bắt đầu với `01_basic_search_visualization.ipynb`
-2. **Intermediate**: Tiếp tục với `02_ivf_clustering_visualization.ipynb`
-3. **Advanced**: Kết thúc với `03_index_comparison_visualization.ipynb`
+**Track 1 - Learning Path** (Học từ cơ bản đến nâng cao):
+1. **Beginner**: `01_basic_search_visualization.ipynb` - Hiểu vector search cơ bản
+2. **Intermediate**: `02_ivf_clustering_visualization.ipynb` - IVF clustering
+3. **Advanced**: `03_index_comparison_visualization.ipynb` - So sánh tất cả indexes
+4. **Expert**: `04_hnsw_visualization.ipynb` - HNSW deep dive
+
+**Track 2 - Production Path** (Xây dựng ứng dụng thực tế):
+1. Start: `01_basic_search_visualization.ipynb` - Foundation
+2. Choose: `02_ivf_clustering_visualization.ipynb` OR `04_hnsw_visualization.ipynb`
+3. Compare: `03_index_comparison_visualization.ipynb` - Pick best index
+4. Deploy: `06_real_world_visualization.ipynb` - Production patterns
 
 ---
 
@@ -134,6 +196,18 @@ Mỗi notebook sẽ tạo ra các file visualizations:
 - `03_radar_comparison.png` - Radar chart
 - `03_pareto_analysis.png` - Pareto frontier
 - `03_decision_guide.png` - Decision tree
+
+### Notebook 04:
+- `04_hnsw_layers.png` - HNSW layer structure
+- `04_efSearch_tradeoff.png` - efSearch parameter curves
+- `04_efSearch_analysis.png` - Detailed efSearch analysis
+- `04_M_comparison.png` - M parameter comparison
+- `04_hnsw_vs_ivf.png` - HNSW vs IVF comparison
+
+### Notebook 06:
+- `06_product_embeddings.png` - Product embedding space
+- `06_recommendation_visualization.png` - Recommendation results
+- `06_production_performance.png` - Performance metrics
 
 ---
 
@@ -197,10 +271,12 @@ Nếu bạn có ý tưởng cho notebooks mới hoặc improvements:
 
 ### Ý tưởng cho notebooks tương lai:
 - GPU acceleration with FAISS-GPU
-- Real-world applications (image search, text embeddings)
-- Advanced tuning và optimization
+- Image search với CLIP embeddings
+- Text search với BERT/Sentence Transformers
+- Advanced filtering và metadata
 - Distributed FAISS với multiple machines
 - Custom distance metrics
+- Online learning và index updates
 
 ---
 
