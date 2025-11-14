@@ -191,7 +191,7 @@ Nhược điểm:
     efSearch_values = [4, 8, 16, 32, 64, 128, 256]
 
     results = progressive_recall_benchmark(
-        index_hnsw.hnsw,
+        index_hnsw,
         query_vectors,
         gt_indices,
         'efSearch',
