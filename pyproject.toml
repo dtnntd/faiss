@@ -5,7 +5,10 @@ description = "FAISS examples and Vietnamese text search with Google embeddings"
 requires-python = ">=3.11"
 dependencies = [
     "faiss-cpu>=1.12.0",
+    "ipython>=8.12.0",
+    "jupyter>=1.0.0",
     "matplotlib>=3.10.7",
+    "matplotlib-inline>=0.1.6",
     "numpy>=2.3.4",
     "scikit-learn>=1.7.2",
     "scipy>=1.16.3",
