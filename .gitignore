@@ -9,8 +9,12 @@ wheels/
 # Virtual environments
 .venv
 
-# Data files
-data/
+# Data files (but keep scripts)
+data/*.txt
+data/*.npy
+data/*.faiss
+data/__pycache__/
+data/*.py[oc]
 *.faiss
 
 # IDE
