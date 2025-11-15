@@ -8,6 +8,8 @@ wheels/
 
 *.env
 
+*.lock
+
 # Virtual environments
 .venv
 
